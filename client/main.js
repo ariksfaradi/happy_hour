@@ -1,0 +1,1 @@
+Meteor.subscribe("bars", {lon: Session.get('lon'), lat: Session.get('lat')});

@@ -1,0 +1,36 @@
+<template name="addNewBar">      
+  <form id="addNewBarForm">
+  *photo...<br>
+    <label for="title">Bar Name:</label>
+    <input type="text" id="title"><br>
+    
+    <label for="itemPrice">Price:</label>
+    <input type="text" id="itemPrice"><br>
+    
+	<label for="ageLimit">Age Limit:</label>
+	<input type="number" id="ageLimit" min="18" max="120"><br>
+   	
+	<label for="webPage">Home Page:</label>
+	<input type="url" id="webPage"><br>
+
+	<legend>Your Contact information:</legend>
+	<label for="email">Email:</label>
+	<input type="email" id="email"><br>
+	<label for="mobile">Mobile</label>
+	<input type="tel" id="mobile" name="mobile"><br>
+	<legend>Bar Address</legend>
+	<label for="address">Address Line:</label>
+	<textarea rows="1"  name="address" ></textarea><br>
+	<label for="city">City:</label>
+	<input type="text" id="city"><br>
+    
+    <input type="submit" id="addNewBar" value="Add Bar">
+  </form>
+
+  <div>
+    {{#each bars}}
+      {{> barItem}}
+    {{/each}}
+  </div>
+
+</template>

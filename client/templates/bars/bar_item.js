@@ -5,3 +5,10 @@ Template.barItem.helpers({
     return a.hostname;
   }
 });
+
+
+Template.barItem.events({
+  'click .deleteItem': function(){
+    Bars.remove(this._id);
+  }
+});

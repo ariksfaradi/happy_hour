@@ -1,4 +1,4 @@
-<template name="addNewBar">      
+<template name="addNewBar">
   <form id="addNewBarForm">
   *photo...<br>
     <label for="title">Bar Name:</label>
@@ -21,9 +21,12 @@
 	<legend>Bar Address</legend>
 	<label for="address">Address Line:</label>
 	<textarea rows="1"  name="address" ></textarea><br>
-	<label for="city">City:</label>
-	<input type="text" id="city"><br>
-    
+	<legend>Coordinates:</legend><br>
+	<label for="lon">Lon:</label>
+	<input type="text" id="lon" required>
+	<label for="lat">Lat:</label>
+	<input type="text" id="lat" required><br> 
+	   
     <input type="submit" id="addNewBar" value="Add Bar">
   </form>
 

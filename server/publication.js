@@ -3,15 +3,18 @@ Meteor.publish("bars", function (coordinates) {
    if (!coordinates.lon) {
     return;
    } 
+  // var geo = new GeoCoder();
+  // var result = geo.geocode('29 champs elysée paris');
+  // console.log(result);
+  // return Bars.find();
    return Bars.find({
       loc: {
         $near:{
           $geometry: {
             type: "Point",
-            // coordinates : [ 0, 0]  
             coordinates : [ coordinates.lon, coordinates.lat]  
           },
-          $maxDistance: 2000   //meters
+          $maxDistance: 7000   //meters
         }
       }
     });

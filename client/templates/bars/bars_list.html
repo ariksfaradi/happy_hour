@@ -1,12 +1,5 @@
 <template name="barsList">
-  <div>
-    {{> location}}
-  </div>
-
-  <div>
-	<a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a>
-  </div>
-  <div>
+  <div class="bar-list">
     {{#each bars}}
       {{> barItem}}
     {{/each}}

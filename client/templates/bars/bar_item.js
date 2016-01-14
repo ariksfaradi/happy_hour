@@ -8,7 +8,7 @@ Template.barItem.helpers({
 
 
 Template.barItem.events({
-  'click .deleteItem': function(){
+  'click .delete-item': function(){
     Bars.remove(this._id);
   }
 });

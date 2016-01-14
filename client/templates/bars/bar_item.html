@@ -1,12 +1,13 @@
 <template name="barItem">
-  <div>
+  <div class="bar-style">
+    <div class="photos">Photos</div>
     <div>
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3 class="bar-name" style="color:black"><a class="barName" href="{{url}}">{{title}}</a><br><span>{{domain}}</span></h3>
     </div>
 
-    <div>
+    <div class="bar-attribute">
     	{{ageLimit}}
-    	{{price}}
+    	{{offer}}
     </div>
 
     <div>
@@ -15,6 +16,7 @@
     	{{address}}
     	{{city}}
     </div>
-    <td><button class="deleteItem">Delete</button></td>
+        <button class="botton-style">I'm Comming!</button>
+        <button class="delete-item">Delete</button>
   </div>
 </template>

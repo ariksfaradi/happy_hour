@@ -1,11 +1,12 @@
 <template name="layout">
-  <div class="container">
-    <header class="navbar navbar-default" role="navigation"> 
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Home</a>
-      </div>
+  <div>
+    <header>
+    <div> 
+      {{> head}}
+    </div>
     </header>
-    <div id="main">
+
+    <div id="main" class="main">
       {{> yield}}
     </div>
   </div>

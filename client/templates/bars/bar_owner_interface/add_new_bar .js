@@ -8,7 +8,7 @@ Template.addNewBar.events({
     }
 
     var newBar = {
-      name: $('#barName').val(),
+      title: $('#barName').val(),
       offer: $('#itemPrice').val(),
       ageLimit: $('#ageLimit').val(),
       email: $('#email').val(),

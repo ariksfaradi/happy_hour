@@ -3,42 +3,93 @@ html {
 }
 
 body {
-	background: #F8F8F8 ;	
+	margin: 0;
+	padding: 0;
+	background: #f0f0f0;
+	font: 14px/20px Arial, San-Serif;
+	color: #555;
 }
 
 .main {
 	padding-top: 6rem;
 }
-#head-style {
+
+header {
 	position: fixed;
-	z-index: 10;
+	z-index: 100;
+	opacity: 0.90; 
 	width: 100%;
-	background: black;
+	background: #ac00e6;
 	color: white;
 	margin-bottom: 90px;
-	/*box-sizing: border-box;
-	moz-box-sizing: border-box;*/
+	text-align: center;
 }
 
-	#head-style li {
+	.head-style li {
 		display: inline;
+		padding-right: 20px;
 	}
 
-	#head-style a {
+	.head-style a {
 		text-align: right;
+		font-weight: bold;		
 	}
 
-	#head-style a:hover {
+	.head-style a:hover {
 		color: purple;
 		text-decoration: none;
 	}
 
-.bar-list {
-	padding-right: 60px;
-	padding-left: 60px;
+#logo {
+	margin: 20px;
+	float: right;
+	width: 200px;
+	/*background: url(http://www.w3newbie.com/wp-content/uploads/the-gym.png) no-repeat center;*/
 }
+
+nav {
+	float: left;
+	/*padding: 35px 20px 20px 0;*/
+}
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+
+.fa-bars {
+		position: relative;
+	}
+
+	.fa-bars:before {
+    /*content: "\f000";*/
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: red;
+    font-size: 18px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+	}
+
+.bar-list {
+	padding-right: 200px;
+	padding-left: 200px;
+}
+
 a {
 	text-decoration: none;
+	
+	transition-property: color;
+	transition-duration: 500ms;
+	transition-delay: 10ms;
+	transition-timing-function: ease-out;
 }
 
 a:visited {
@@ -46,6 +97,8 @@ a:visited {
 }
 a:hover {
 	text-decoration: underline;
+			color: black;
+			transition-timing-function: ease-in;
 }
 
 .menu-bar {
@@ -53,8 +106,9 @@ a:hover {
 }
 
 .photos {
-	height: 22.52vh;
+	height: 24.52vh;
 }
+
 .bar-style {
 	padding-bottom: 1.25rem;
 }
@@ -71,16 +125,43 @@ a:hover {
 	background: #b3003a;
 	color: #ffffff;
 	font-size: 1.25rem;
-	height: 35.04vh;
+	height: 30vh;
 }
 
 .botton-style {
 	background: #e60000;
 	color: #ffffff;
 	font-size: 1.25rem;
-	height: 11.7vh;
+	height: 10vh;
 }
 
 .delete-item {
 	float: right;
 }
+
+.navigate {
+	width: 100%;
+	background: #ffb3b3;
+	color: white;
+	font-size: 1.25rem;
+	height: 10vh;
+}
+
+@media screen and (max-width: 700px) {
+	/*mobile*/
+	.bar-list {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	html {
+	font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 700px) and (max-width: 960px) {
+	/*medium size*/
+	.bar-list {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}  

@@ -8,17 +8,18 @@ Template.listingSubmit.rendered = function () {
         google.maps.event.addListener(autocomplete, 'place_changed', function() { 
 
              // Get the place details from the autocomplete object. 
-             place = autocomplete.getPlace(); 
-
-             console.log("place: " + JSON.stringify(place) ); 
+            place = autocomplete.getPlace(); 
         }); 
     }; 
 };
 
 Template.addNewBar.events({
   'submit form': function(e, b){
-    var lon = parseFloat($('#lon').val());
-    var lat = parseFloat($('#lat').val());   
+    var lon = place.geometry.location.lng(place);
+    var lat = place.geometry.location.lat(place);
+    console.log("GEOMETRY:::::    " + JSON.stringify(place.geometry.location));
+    console.log("GEOMETRY LNG:::::    " + JSON.stringify(place.geometry.location.lng(place)));
+    console.log("GEOMETRY LAT:::::    " + JSON.stringify(place.geometry.location.lat(place)));
     if (!lon || !lat)
     {
         return;
@@ -33,8 +34,7 @@ Template.addNewBar.events({
       // address: JSON.stringify(place),
       loc : { type: "Point", coordinates: [ lon, lat ] }
     };
-    console.log("GEOMETRY:::::    " + JSON.stringify(place.geometry.location));
-    console.log("GEOMETRY LNG:::::    " + JSON.stringify(place.geometry.location.lng));
+
     Bars.insert(newBar);
  
     $('#addNewBarForm').find('input:text').val('');

@@ -14,7 +14,7 @@ Meteor.publish("bars", function (coordinates) {
             type: "Point",
             coordinates : [ coordinates.lon, coordinates.lat]  
           },
-          $maxDistance: 20000   //meters
+          $maxDistance: 4000   //meters
         }
       }
     });

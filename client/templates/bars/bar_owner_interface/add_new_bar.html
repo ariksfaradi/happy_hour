@@ -2,20 +2,20 @@
   <form id="addNewBarForm">
   *photo...<br>
     <label for="title">Bar Name:</label>
-    <input type="text" id="title"><br>
+    <input type="text" id="title" name="title"><br>
     {{> listingSubmit}}
-    <label for="itemPrice">Price:</label>
-    <input type="text" id="itemPrice"><br>
+    <label for="itemPrice">Your Offer:</label>
+    <input type="text" id="offer" name="offer"><br>
     
 	<label for="ageLimit">Age Limit:</label>
-	<input type="number" id="ageLimit" min="18" max="120"><br>
+	<input type="number" id="ageLimit" name="ageLimit" min="18" max="120"><br>
    	
 	<label for="webPage">Home Page:</label>
-	<input type="url" id="webPage"><br>
+	<input type="url" id="url" name="url"><br>
 
 	<legend>Your Contact information:</legend>
 	<label for="email">Email:</label>
-	<input type="email" id="email"><br>
+	<input type="email" id="email" name="email"><br>
 	<label for="mobile">Mobile</label>
 	<input type="tel" id="mobile" name="mobile"><br>
 <!-- 	<legend>Coordinates:</legend><br>

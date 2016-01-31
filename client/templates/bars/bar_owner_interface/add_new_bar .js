@@ -14,27 +14,25 @@ Template.listingSubmit.rendered = function () {
 };
 
 Template.addNewBar.events({
-  'submit form': function(e, b){
+  'submit form': function (e) {
     var lon = place.geometry.location.lng(place);
     var lat = place.geometry.location.lat(place);
-    console.log("GEOMETRY:::::    " + JSON.stringify(place.geometry.location));
-    console.log("GEOMETRY LNG:::::    " + JSON.stringify(place.geometry.location.lng(place)));
-    console.log("GEOMETRY LAT:::::    " + JSON.stringify(place.geometry.location.lat(place)));
     if (!lon || !lat)
     {
         return;
     }
 
     var newBar = {
-      title: $('#barName').val(),
-      offer: $('#itemPrice').val(),
-      ageLimit: $('#ageLimit').val(),
-      email: $('#email').val(),
-      mobile: $('mobile').val(),
-      // address: JSON.stringify(place),
+      title: $(e.target).find('[name=title]').val(),
+      offer: $(e.target).find('[name=offer]').val(),
+      ageLimit: $(e.target).find('[name=ageLimit]').val(),
+      url: $(e.target).find('[name=url]').val(),
+      email: $(e.target).find('[name=email]').val(),
+      mobile: $(e.target).find('[name=mobile]').val(),
+      address: place.formatted_address,
       loc : { type: "Point", coordinates: [ lon, lat ] }
     };
-
+    console.log(newBar);
     Bars.insert(newBar);
  
     $('#addNewBarForm').find('input:text').val('');

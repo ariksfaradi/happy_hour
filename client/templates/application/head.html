@@ -1,4 +1,5 @@
-<template name="head">
+<template name="header">
+	<header>
 	<!-- <div id="head-style">  -->
 	<a href="#" id="logo">Happy Hour(logo)</a>
 	<nav>
@@ -6,13 +7,17 @@
 		<ul>
 			<li><a  href="/">Home</a></li>
 			<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>
+			<li><a href="{{pathFor 'discoverySettings'}}">Discovery Settings</a></li>
 		</ul>		
 	</nav>
-
+	<ul>
+		{{>loginButtons}}
+	</ul>
 		<!-- <div style="text-align:left">
 		  {{> location}}
 		</div>
  -->
 	<!-- </div> -->
+	</header>
 </template>      
 

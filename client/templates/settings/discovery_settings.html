@@ -1,0 +1,15 @@
+<template name="discoverySettings">
+	<form>
+		<ul>
+			<!-- <li><input type="range" name="searchDistance" id="searchDistance" class="slider" min="0" max="100" step="1" value="50" >
+				<output for="searchDistance" id="output" onforminput="value = searchDistance.valueAsNumber"></output>
+			</li>
+			 -->
+			<li><input type="text" name="radius" id="radius" placeholder="Enter Distance Limit"></li>
+			<li><input type="range" name="ageLimit" id="ageLimit" class="slider" min="18" max="120" value="24" ></li>
+		</ul>
+
+		
+		 <input type="submit" id="submit" value="Save Settings">
+	</form>
+</template>

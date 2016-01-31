@@ -1,5 +1,5 @@
 GoogleMaps.init({
-  // 'sensor': false, //optional
+  'sensor': false, //optional
   // 'key': 'your api key here!', //optional
   'language': 'en',  //optional
   'libraries': 'places'

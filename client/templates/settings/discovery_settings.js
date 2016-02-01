@@ -1,14 +1,16 @@
-// Template.discoverySettings.helper({
-
-// });
 
 Template.discoverySettings.events({
   'submit form': function(e) {
-    var newRadius = $(e.target).find('[name=radius]').val();  
+    var newRadius = parseInt($(e.target).find('[name=radius]').val());  
+ 	var newAge = $(e.target).find('[name=age]').val();
     console.log("radius = ", newRadius);
-    Session.set('radius', newRadius);
+    
+    Meteor.users.update({_id: Meteor.userId()}, {$set: {
+    	"profile.discoverySettings.radius": newRadius
+    }});
   }
 });
+
 
 // Template.discoverySettings.rendered = function(){
 //   document.getElementById("slider").oninput = function() {

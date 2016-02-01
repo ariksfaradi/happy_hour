@@ -1,4 +1,3 @@
-
 Template.discoverySettings.events({
   'submit form': function(e) {
     var newRadius = parseInt($(e.target).find('[name=radius]').val());  

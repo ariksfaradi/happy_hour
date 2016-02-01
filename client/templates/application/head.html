@@ -6,7 +6,7 @@
 		<a href="#" id="menu-icon" class="fa-bar"></a>
 		<ul>
 			<li><a  href="/">Home</a></li>
-			<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>
+			{{#if currentUser}}<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>{{/if}}
 			<li><a href="{{pathFor 'discoverySettings'}}">Discovery Settings</a></li>
 		</ul>		
 	</nav>

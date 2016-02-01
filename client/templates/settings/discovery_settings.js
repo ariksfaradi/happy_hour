@@ -1,11 +1,10 @@
-
 // Template.discoverySettings.helper({
 
 // });
 
 Template.discoverySettings.events({
   'submit form': function(e) {
-    var newRadius = $(e.target).find('[name=radius]').val()  
+    var newRadius = $(e.target).find('[name=radius]').val();  
     console.log("radius = ", newRadius);
     Session.set('radius', newRadius);
   }

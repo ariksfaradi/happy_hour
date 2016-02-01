@@ -21,9 +21,12 @@ mdg:geolocation
 meteorhacks:aggregate
 sacha:spin
 iron:router
-dburles:google-maps
-aramk:requirejs
-meteorhacks:npm
 
 
-npm-container
+
+
+mrt:googlemaps
+accounts-ui
+accounts-password
+accounts-base
+accounts-facebook

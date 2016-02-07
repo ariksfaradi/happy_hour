@@ -1,231 +1,157 @@
-html {
-	font-size: 16px;
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	background: #f0f0f0;
-	font: 14px/20px Arial, San-Serif;
-	color: #555;
+ul {
+  list-style-type: none;
 }
 
-.main {
-	padding-top: 6rem;
+a {
+  color: #000000
 }
 
-header {
-	position: fixed;
-	z-index: 100;
-	opacity: 0.90; 
-	width: 100%;
-	background: #ac00e6;
-	color: white;
-	margin-bottom: 90px;
-	text-align: center;
+/*______________________________Header styles______________________________*/
+
+.header {
+  position: fixed;
+  z-index: 100;
+  opacity: 0.90; 
+  width: 100%;
+  background: #ac00e6;
+  color: white;
+  margin-bottom: 90px;
+  text-align: center;  
 }
 
-nav {
-	float: left;
-	/*padding: 35px 20px 20px 0;*/
-}
-	nav li {
-		display: inline-block;
-		padding: 10px;
+.navbar-default .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+} 
+  .navbar-brand:visited {
+    color: #ffffff;
+  }
 
-		transition-property: background;
-		transition-duration: 500ms;
-		transition-delay: 10ms;
-		transition-timing-function: ease-out;
-	}
-
-	nav li:hover {
-		background: #39925E;
-		height: 100%;
-	}
-
-	nav a {
-		text-align: right;
-		font-weight: bold;		
-	}
-
-	nav a:hover {
-		color: #000000;
-		text-decoration: none;
-	}
-
-#logo {
-	margin: 20px;
-	float: right;
-	width: 200px;
-	/*background: url(http://www.w3newbie.com/wp-content/uploads/the-gym.png) no-repeat center;*/
+.navbar-default .navbar-collapse {
+   border: none;
+   border-color: none; 
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
 
+.navbar-default .navbar-nav > li > a:hover {
+    background: #39925E;
+    /*height: 100%;*/
+  }
 
-#menu-icon {
-	display: hidden;
-	width: 40px;
-	height: 40px;
-	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+.login {
+  color: black;
+  text-align: right;
+}
+
+.navbar-default .navbar-toggle { 
+    background: #000000;
+}
+
+/*/////////////////////////////////////////////////////////////*/
+
+#body {
+  padding-top: 50px;
 }
 
 
 .bar-list {
-	padding-right: 200px;
-	padding-left: 200px;
+  padding-left: 200px;
+  padding-right: 200px; 
 }
 
-
-a {
-	text-decoration: none;
-	
-	transition-property: color;
-	transition-duration: 500ms;
-	transition-delay: 10ms;
-	transition-timing-function: ease-out;
+.context {
+  text-align: center;
 }
 
-a:visited {
-	color: #ffffff;
-}
-a:hover {
-	text-decoration: underline;
-			color: black;
-			transition-timing-function: ease-in;
+.details {
+  color: #000000; 
 }
 
-.menu-bar {
-	height: 11.7vh;
-}
-
-.photos {
-	height: 24.52vh;
-}
-
-.bar-style {
-	padding-bottom: 1.25rem;
+.bar-item {
+  position: relative;
+  text-align: center;
+  background: #DADA92;
+  margin-bottom: 15px;
+  height: 92vh; 
 }
 
 .bar-name {
-	background: #cc0000 ;
-	color: #ffffff;
-	text-align: center;
-	font-size: 1.40rem;
-	height: 9vh;
+  margin-top: 10px;
+  font-weight: bolder;  
+}
+.bar-attribute {
+  /*height: 30vh;*/
 }
 
-.bar-attribute{
-	background: #b3003a;
-	color: #ffffff;
-	font-size: 1.25rem;
-	height: 30vh;
+.primary-offer {
+  height: 12vh;
+  font-size: 20px;
 }
 
-.botton-style {
-	background: #e60000;
-	color: #ffffff;
-	font-size: 1.25rem;
-	height: 10vh;
+.bar-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%
 }
-
-.delete-item {
-	float: right;
-}
-
 .navigate {
-	width: 100%;
-	background: #ffb3b3;
-	color: white;
-	font-size: 1.25rem;
-	height: 10vh;
+  font-size: 18px;
+}
+.details {
+  font-size: 18px;
+}
+.reservation {
+  color: #FF0000;
+  /*background: #ffffff;*/
+  font-weight: bold;
+  font-size: 18px;
 }
 
 
-output {
-	position: absolute;
-	background-image: linear-gradient(top, #444444, #999999);
-	width: 40px; 
-	height: 30px; 
-	text-align: center; 
-	color: white; 
-	border-radius: 10px; 
-	display: inline-block; 
-	font: bold 15px/30px Georgia;
-	bottom: 175%;
-	left: 0;
-	margin-left: -1%;	
+.share, .like {
+  color: #ac00e6;
+  font-size: 200%;
+  text-align: bottom;
 }
 
-output:after { 
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-top: 10px solid #999999;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	margin-top: -1px;
+.image {
+  display: inline-block;
+  width: 49%;
+  border: 1px solid navy;
+  height: 31vh;
+  background: #B2C6D0;
+  margin: 0px
 }
 
+a.share:hover, a.shre:visited a.like:hover, a.like:visited {
+    color: #ac00e6;
+  }
 
-@media screen and (max-width: 700px) {
-	/*mobile*/
-	.bar-list {
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-	html {
-	font-size: 12px;
-	}
 
-	#menu-icon {
-		display: inline-block;
-	}
+@media  screen and (max-width: 700px) {
+  .bar-list {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 
-	nav ul , nav:active ul  {
-		visibility: hidden;
-  		opacity: 0;
-  		transition: visibility 0s, opacity 0.5s linear;
-		position: absolute;
-		padding: 20px;
-		background: #405580;
-		border: 1px solid #fff;
-		left: 10px;
-		top: 10px;
-		width: 25%;
-		border-radius: 2px 0 2px 2px; 
-	}
-
-	
-	nav li {
-		text-align: center;
-		width: 100%;
-		padding: 10px 0;
-		margin: 0;
-	}
-	nav:hover ul {
-		display: block;
-  		visibility: visible;
-  		opacity: 1;
-	}
-
-	nav li:hover {
-		background-color: #405580;
-	}
-
+  .bar-item {
+    max-height: 100%;
+  }  
 }
-
 
 @media screen and (min-width: 700px) and (max-width: 960px) {
-	/*medium size*/
-	.bar-list {
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-
-
-}  
+  /*medium size*/
+  .bar-list {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}

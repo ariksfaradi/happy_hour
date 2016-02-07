@@ -1,25 +1,46 @@
 <template name="barItem">
-  <div class="bar-style">
-    <div class="photos">Photos</div>
-    <div>
-      <h3 class="bar-name" style="color:black"><a class="barName" href="{{url}}">{{title}}</a><br><span>{{domain}}</span></h3>
-    </div>
+  <div class="bar-item">  
+    <div class="image">photo1</div>
+    <div class="image">photo2</div>
+    <h2 class="bar-name">{{title}}</h2>
 
     <div class="bar-attribute">
-    	{{ageLimit}}
-    	{{offer}}
-    </div>
+    	<div class="primary-offer">
+    		{{offer}}	
+    	</div>
+    	
 
-    <div>
-    	{{email}}
-    	{{mobile}}
-    	{{address}}
-    </div>
-    <div >
-        <button class="navigate">TODO m </button>
-    </div>
-        
-        <button class="botton-style">I'm Comming!</button>
-        <button class="delete-item">Delete</button>
+      <ul class="bar-buttons">
+        <li><a href="#" class="navigate btn btn-default">Navigate</a></li>
+          
+        <li><a href="#" class="details dropdown-toggle btn-default btn" data-toggle="collapse" data-target=".details">more about <b>{{title}}</b> <b class="caret"></b></a></li>
+          
+          <ul class="collapse details">
+            <li>{{address}}</li>
+            <li>{{ageLimit}}</li>
+            <li>{{domain}}</li>
+            <li>{{email}}</li>
+            <li>{{mobile}}</li>
+            <li>yoyo</li>
+          </ul>    
+	    	
+	    	<li><a href="#" class="reservation btn btn-default">Wait, I'm coming!</a></li>
+	    	<li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
+	    	<li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
+      </ul>
+
+	    </div>
   </div>
 </template>
+
+<!-- <li class="dropdown">
+
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media</a>
+    <ul class="dropdown-menu">
+        <li><a href="#">Twiter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Google+</a></li>
+        <li><a href="#">Instegram</a></li>
+    </ul>
+
+</li>    -->

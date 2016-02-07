@@ -1,0 +1,30 @@
+<template name="header">
+	<nav class="navbar-default header">
+  	<!-- <div class="contaier"> -->
+  		<a class="navbar-brand" href="/">Happy Hour</a>
+  		
+  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+  			<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+  		</button>
+
+  		<div class="collapse navbar-collapse navHeaderCollapse">
+  			<ul class="nav navbar-nav">
+  				<li><a href="{{pathFor 'discoverySettings'}}">Discovery Settings</a></li>
+  			{{#if currentUser}}<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>{{/if}}	
+  			</ul>
+
+	  		<ul class="login">
+					{{>loginButtons}}
+				</ul>
+  		</div>
+		
+	</nav>
+</template>      
+
+
+      
+        <!-- <span class="sr-only">Toggle navigation</span> -->
+        
+      

@@ -1,0 +1,231 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #f0f0f0;
+	font: 14px/20px Arial, San-Serif;
+	color: #555;
+}
+
+.main {
+	padding-top: 6rem;
+}
+
+/*header {
+	position: fixed;
+	z-index: 100;
+	opacity: 0.90; 
+	width: 100%;
+	background: #ac00e6;
+	color: white;
+	margin-bottom: 90px;
+	text-align: center;
+}*/
+
+nav {
+	float: left;
+	/*padding: 35px 20px 20px 0;*/
+}
+	nav li {
+		display: inline-block;
+		padding: 10px;
+
+		transition-property: background;
+		transition-duration: 500ms;
+		transition-delay: 10ms;
+		transition-timing-function: ease-out;
+	}
+
+	nav li:hover {
+		background: #39925E;
+		height: 100%;
+	}
+
+	nav a {
+		text-align: right;
+		font-weight: bold;		
+	}
+
+	nav a:hover {
+		color: #000000;
+		text-decoration: none;
+	}
+
+#logo {
+	margin: 20px;
+	float: right;
+	width: 200px;
+	/*background: url(http://www.w3newbie.com/wp-content/uploads/the-gym.png) no-repeat center;*/
+}
+
+
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+
+
+.bar-list {
+	padding-right: 200px;
+	padding-left: 200px;
+}
+
+
+a {
+	text-decoration: none;
+	
+	transition-property: color;
+	transition-duration: 500ms;
+	transition-delay: 10ms;
+	transition-timing-function: ease-out;
+}
+
+a:visited {
+	color: #ffffff;
+}
+a:hover {
+	text-decoration: underline;
+			color: black;
+			transition-timing-function: ease-in;
+}
+
+.menu-bar {
+	height: 11.7vh;
+}
+
+.photos {
+	height: 24.52vh;
+}
+
+.bar-style {
+	padding-bottom: 1.25rem;
+}
+
+.bar-name {
+	background: #cc0000 ;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.40rem;
+	height: 9vh;
+}
+
+.bar-attribute{
+	background: #b3003a;
+	color: #ffffff;
+	font-size: 1.25rem;
+	height: 30vh;
+}
+
+.botton-style {
+	background: #e60000;
+	color: #ffffff;
+	font-size: 1.25rem;
+	height: 10vh;
+}
+
+.delete-item {
+	float: right;
+}
+
+.navigate {
+	width: 100%;
+	background: #ffb3b3;
+	color: white;
+	font-size: 1.25rem;
+	height: 10vh;
+}
+
+
+output {
+	position: absolute;
+	background-image: linear-gradient(top, #444444, #999999);
+	width: 40px; 
+	height: 30px; 
+	text-align: center; 
+	color: white; 
+	border-radius: 10px; 
+	display: inline-block; 
+	font: bold 15px/30px Georgia;
+	bottom: 175%;
+	left: 0;
+	margin-left: -1%;	
+}
+
+output:after { 
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #999999;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	margin-top: -1px;
+}
+
+
+@media screen and (max-width: 700px) {
+	/*mobile*/
+	.bar-list {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	html {
+	font-size: 12px;
+	}
+
+	#menu-icon {
+		display: inline-block;
+	}
+
+	nav ul , nav:active ul  {
+		visibility: hidden;
+  		opacity: 0;
+  		transition: visibility 0s, opacity 0.5s linear;
+		position: absolute;
+		padding: 20px;
+		background: #405580;
+		border: 1px solid #fff;
+		left: 10px;
+		top: 10px;
+		width: 25%;
+		border-radius: 2px 0 2px 2px; 
+	}
+
+	
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+	nav:hover ul {
+		display: block;
+  		visibility: visible;
+  		opacity: 1;
+	}
+
+	nav li:hover {
+		background-color: #405580;
+	}
+
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 960px) {
+	/*medium size*/
+	.bar-list {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+
+}  

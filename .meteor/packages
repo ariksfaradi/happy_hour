@@ -25,9 +25,12 @@ iron:router
 
 
 mrt:googlemaps
-accounts-ui
 accounts-password
 accounts-base
 accounts-facebook
 twbs:bootstrap
 fortawesome:fontawesome
+miktam:loggly
+ian:accounts-ui-bootstrap-3
+aldeed:simple-schema
+aldeed:collection2

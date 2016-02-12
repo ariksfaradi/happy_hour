@@ -16,3 +16,5 @@ in the next step the app should support in a user input page of adding new bar.
 	aldeed:geocoder
 
 
+	added twbs:bootstrap
+	add miktam:loggly

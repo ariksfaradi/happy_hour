@@ -1,5 +1,5 @@
 Template.listingSubmit.rendered = function () { 
-    window.onload = function() { 
+    // window.onload = function() { 
 
         input = document.getElementById('autocomplete'); 
         autocomplete = new google.maps.places.Autocomplete(input); 
@@ -10,7 +10,7 @@ Template.listingSubmit.rendered = function () {
              // Get the place details from the autocomplete object. 
             place = autocomplete.getPlace(); 
         }); 
-    }; 
+    // }; 
 };
 
 Template.addNewBar.events({

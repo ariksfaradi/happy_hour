@@ -1,6 +1,7 @@
 <template name="addNewBar">
   <form id="addNewBarForm">
-  *photo...<br>
+    <input type="text" id="img1" name="img1" placeholder="first image url"><br>
+    <input type="text" id="img2" name="img2" placeholder="second image url"><br>
     <label for="title">Bar Name:</label>
     <input type="text" id="title" name="title"><br>
     {{> listingSubmit}}
@@ -18,13 +19,8 @@
 	<input type="email" id="email" name="email"><br>
 	<label for="mobile">Mobile</label>
 	<input type="tel" id="mobile" name="mobile"><br>
-<!-- 	<legend>Coordinates:</legend><br>
-	<label for="lon">Lon:</label>
-	<input type="text" id="lon" required>
-	<label for="lat">Lat:</label>
-	<input type="text" id="lat" required><br> 
- -->	   
-    <input type="submit" id="addNewBar" value="Add Bar">
+
+	<input type="submit" id="addNewBar" value="Add Bar">
   </form>
 
 <!--   <div>

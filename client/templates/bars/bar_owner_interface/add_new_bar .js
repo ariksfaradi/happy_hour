@@ -1,16 +1,13 @@
 Template.listingSubmit.rendered = function () { 
-    // window.onload = function() { 
+    input = document.getElementById('autocomplete'); 
+    autocomplete = new google.maps.places.Autocomplete(input); 
 
-        input = document.getElementById('autocomplete'); 
-        autocomplete = new google.maps.places.Autocomplete(input); 
+    // When the user selects an address from the dropdown, 
+    google.maps.event.addListener(autocomplete, 'place_changed', function() { 
 
-        // When the user selects an address from the dropdown, 
-        google.maps.event.addListener(autocomplete, 'place_changed', function() { 
-
-             // Get the place details from the autocomplete object. 
-            place = autocomplete.getPlace(); 
-        }); 
-    // }; 
+         // Get the place details from the autocomplete object. 
+        place = autocomplete.getPlace(); 
+    }); 
 };
 
 Template.addNewBar.events({
@@ -21,8 +18,16 @@ Template.addNewBar.events({
     {
         return;
     }
-
+    var image1 = $(e.target).find('[name=img1]').val();
+    if (!image1)
+      image1 = "http://telavivparty.com/wp-content/uploads/2014/11/montage.jpg";
+    var image2 = $(e.target).find('[name=img2]').val();
+    if (!image2)
+      image2 = "http://e-barnyc.com/wp-content/uploads/2014/05/20140423_Es_bar-9571_ENF.tif.jpg"; 
+    
     var newBar = {
+      img1: image1,
+      img2: image2,
       title: $(e.target).find('[name=title]').val(),
       offer: $(e.target).find('[name=offer]').val(),
       ageLimit: $(e.target).find('[name=ageLimit]').val(),

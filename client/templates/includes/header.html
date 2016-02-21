@@ -1,25 +1,30 @@
 <template name="header">
-	<nav class="navbar-default header">
-  	<!-- <div class="contaier"> -->
-  		<a class="navbar-brand" href="/">Happy Hour</a>
-  		
-  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-  			<span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-  		</button>
+	<nav class="navbar-default header" role="navigation">
+  	<div class="contaier">
+      
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+       <a class="navbar-brand" href="/">Happy Hour</a>	
+      </div>
 
-  		<div class="collapse navbar-collapse navHeaderCollapse">
+  		<div id="navbar" class="collapse navbar-collapse">
   			<ul class="nav navbar-nav">
+          <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
   				<li><a href="{{pathFor 'discoverySettings'}}">Discovery Settings</a></li>
-  			{{#if currentUser}}<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>{{/if}}	
+  			   {{#if currentUser}}<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>{{/if}}	
   			</ul>
 
-	  		<ul class="login">
-					{{>loginButtons}}
-				</ul>
+        <ul class="nav navbar-nav navbar-right login">
+          {{>loginButtons}}
+        </ul>
   		</div>
-		
+      
+    </div>		
 	</nav>
 </template>      
 

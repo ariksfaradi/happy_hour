@@ -1,15 +1,23 @@
 <template name="discoverySettings">
-	<form>
-		<ul>
-			<!-- <li><input type="range" name="searchDistance" id="searchDistance" class="slider" min="0" max="100" step="1" value="50" >
-				<output for="searchDistance" id="output" onforminput="value = searchDistance.valueAsNumber"></output>
-			</li>
-			 -->
-			<li><input type="text" name="radius" id="radius" placeholder="Enter Distance Limit"></li>
-			<li><input type="range" name="ageLimit" id="ageLimit" class="slider" min="18" max="120" value="24" ></li>
-		</ul>
+	<div class="container">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">			
+				<label for="radius" class="col-sm-3 control-label">Search distance:</label>
+				<div class="col-sm-9">
+					<input type="text" name="radius" id="radius" class="form-control" placeholder="Enter Distance Limit">
+				</div>
+				
+				<label for="ageLimit" class="col-sm-3 control-label">Age limit:</label>
+				<div class="col-sm-9">
+					<input type="range" name="ageLimit" id="ageLimit" class="form-control" min="18" max="120" value="24">
+					<!-- <input type="range" name="ageLimit" id="ageLimit" class="slider form-control" min="18" max="120" value="24"> -->
+				</div>
 
-		
-		 <input type="submit" id="submit" value="Save Settings">
+			</div>
+		 <input type="submit" id="submit" value="Save Settings" class="btn btn-success">
+		 <input type="" id="submit" value="Cancel" class="btn btn-danger">
 	</form>
+	</div>
 </template>
+
+      

@@ -1,38 +1,92 @@
 <template name="addNewBar">
-  <form id="addNewBarForm">
-    <input type="text" id="img1" name="img1" placeholder="first image url"><br>
-    <input type="text" id="img2" name="img2" placeholder="second image url"><br>
-    <label for="title">Bar Name:</label>
-    <input type="text" id="title" name="title"><br>
-    {{> listingSubmit}}
-    <label for="itemPrice">Your Offer:</label>
-    <input type="text" id="offer" name="offer"><br>
-    
-	<label for="ageLimit">Age Limit:</label>
-	<input type="number" id="ageLimit" name="ageLimit" min="18" max="120"><br>
-   	
-	<label for="webPage">Home Page:</label>
-	<input type="url" id="url" name="url"><br>
+<div class="container">
+  <form id="addNewBarForm" class="form-horizontal" role="form">
+    <div class="add-new-bar">
 
-	<legend>Your Contact information:</legend>
-	<label for="email">Email:</label>
-	<input type="email" id="email" name="email"><br>
-	<label for="mobile">Mobile</label>
-	<input type="tel" id="mobile" name="mobile"><br>
+      <div class="form-group">
+        <label for="img1" class="col-sm-2 control-label"> Image 1:</label>
+        <div class="col-sm-10">
+          <input type="text" id="img1" name="img1" class="form-control" placeholder="Enter first image url">
+        </div>      
+      </div>
 
-	<input type="submit" id="addNewBar" value="Add Bar">
+      <div class="form-group">
+        <label for="img2" class="col-sm-2 control-label">Image 2:</label>
+        <div class="col-sm-10">
+          <input type="text" id="img2" name="img2" class="form-control" placeholder="Enter second image url">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Bar's Name:</label>
+        <div class="col-sm-10">
+          <input type="text" id="title" name="title" class="form-control" placeholder="Enter bar's name">  
+        </div>
+      </div>
+      
+      <div class="form-group">
+        {{> listingSubmit}}
+      </div>
+      
+      <div class="form-group">
+        <label for="itemPrice" class="col-sm-2 control-label">Your Offer:</label>
+        <div class="col-sm-10">
+          <input type="text" id="offer" name="offer" class="form-control" placeholder="Enter your offer">
+        </div>
+      </div>
+ 
+      <div class="form-group">
+        <label for="ageLimit" class="col-sm-2 control-label">Age Limit:</label>
+        <div class="col-sm-10">
+          <input type="number" id="ageLimit" name="ageLimit" class="form-control" min="18" max="120">
+        </div>        
+      </div>      
+      
+      <div class="form-group">
+        <label for="webPage" class="col-sm-2 control-label">Home Page:</label>
+        <div class="col-sm-10">
+          <input type="url" id="url" name="url" class="form-control">
+        </div>        
+      </div>        
+
+      <legend>Your Contact information:</legend>
+      
+      <div class="form-group">
+
+        <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+        <div class="col-xs-5 col-sm-4 col-md-3">
+          <div class="input-group">
+            <div class="input-group-addon">(</div>
+            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
+            <div class="input-group-addon">)</div> 
+          </div>
+        </div>
+        <div class="col-xs-7 col-sm-6 col-md-7">
+          <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Tel. number">
+        </div>
+            
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+        </div>       
+      </div>      
+
+    </div>   
+  	<input type="submit" id="addNewBar" value="Add Bar" class="btn btn-success">
+    <input type="" id="Clear" value="Clear" class="btn btn-danger">
   </form>
-
-<!--   <div>
-    {{#each bars}}
-      {{> barItem}}
-    {{/each}}
-  </div> -->
+</div>
 
 </template>
 
 <template name="listingSubmit">
 	<div id="locationField">
-	  <input id="autocomplete" placeholder="Enter your address" type="text">
+    <label for="autocomplete" class="col-sm-2 control-label">Address:</label>
+    <div class="col-sm-10">
+      <input id="autocomplete" placeholder="Enter your address" type="text" class="form-control">
+    </div>
 	</div>
 </template>

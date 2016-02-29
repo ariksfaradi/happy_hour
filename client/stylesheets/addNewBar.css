@@ -1,0 +1,13 @@
+  .add-new-bar {
+  	/*text-align: center;*/
+  	background: #DADA92; 
+  }
+
+/*.form-control {
+	display: inline-block;
+	width: 75%;
+}
+*/
+@media  screen and (max-width: 700px) {
+
+}

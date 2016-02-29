@@ -4,6 +4,7 @@ Template.barItem.helpers({
     a.href = this.url;
     return a.hostname;
   }
+
 });
 
 
@@ -12,3 +13,11 @@ Template.barItem.events({
     Bars.remove(this._id);
   }
 });
+
+Template.barItem.rendered = function() {
+	$('.carousel').carousel({
+	  interval: false
+	});
+};
+
+

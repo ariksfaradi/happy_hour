@@ -18,3 +18,6 @@ in the next step the app should support in a user input page of adding new bar.
 
 	added twbs:bootstrap
 	add miktam:loggly
+
+29.2
+	added alanning:roles for define permission (admin,bar-manager)	

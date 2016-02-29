@@ -6,20 +6,46 @@
 
     <div class="bar-attribute">
     	
-      <div class="carousel-inner" role="listbox">
+      <div id="mycarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            
+            <div class="primary-offer">
+              {{offer}} 
+            </div>         
+           
+          </div>
+          <div class="item">
+            <ul class="details">
+              <li>{{address}}</li>
+              <li>{{ageLimit}}</li>
+              <li>{{domain}}</li>
+              <li>{{email}}</li>
+              <li>{{mobile}}</li>
+              <li>yoyo</li>
+              <li>check!!!</li>
+            </ul>
+                      <a href="#mycarousel" role="button" data-slide="prev" class="left carousel-control">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>      
           </div>
         </div>
       </div>
 
-      <div class="primary-offer">
-    		{{offer}}	
-    	</div>
+      <ul class="bar-buttons">
+        <li><a href="#" class="navigate btn btn-default">Navigate</a></li>
+          
+        <li>
+          <a href="#mycarousel" role="button" data-slide="next" class="details btn btn-default">more about <b>{{title}}</b></a> 
+        </li>
+
+        <li>{{ >reservation}}</li>
+        <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
+        <li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
+      </ul> 
     	
 
-      <ul class="bar-buttons">
+<!--       <ul class="bar-buttons">
         <li><a href="#" class="navigate btn btn-default">Navigate</a></li>
           
         <li><a href="#" class="details dropdown-toggle btn-default btn" data-toggle="collapse" data-target=".details">more about <b>{{title}}</b> <b class="caret"></b></a></li>
@@ -36,7 +62,7 @@
 	    	<li>{{ >reservation}}</li>
         <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
 	    	<li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
-      </ul>
+      </ul> -->
 
 	    </div>
   </div>

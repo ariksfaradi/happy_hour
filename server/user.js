@@ -9,6 +9,7 @@ Accounts.onCreateUser(function (option, user) {
 	 	discoverySettings : {radius: defaultRadius, age: defaultAge}
 	 });
 
+	user.roles = []; 
 	return user;
 });
 
@@ -25,9 +26,6 @@ if (Meteor.users.find().fetch().length === 0) {
 	    {name:"Yael",roles:['admin']},
 	    {name:"Uri",roles:['admin']},
 	    {name:"Arik",roles:['admin']}
-	    // {name:"View-Secrets User",email:"view@example.com",roles:['view-secrets']},
-	    // {name:"Manage-Users User",email:"manage@example.com",roles:['manage-users']},
-	    // {name:"Admin User",email:"admin@example.com",roles:['admin']}
 	  ];
 
 	_.each(users, function (userData) {
@@ -44,6 +42,5 @@ if (Meteor.users.find().fetch().length === 0) {
 		  // Meteor.users.update({_id: id}, {$set:{'emails.0.verified': true}});
 		// Meteor.users.update({_id: id});
 	  	Roles.addUsersToRoles(id, userData.roles);
-
 	});
 }

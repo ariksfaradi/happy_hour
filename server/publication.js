@@ -1,16 +1,27 @@
 Bars._ensureIndex({'loc' : '2dsphere'});
 
-Meteor.publish("bars", function (coordinates, radius) { 
+// hours>= start %% hours[0] <= end
+
+
+convertToFloat = function(hour) {
+  var retVal = hour.substr(0,2) + "." + hour.substr(3,4);
+  return parseFloat(retVal);
+}
+
+Meteor.publish("bars", function (coordinates, radius, hours) { 
   Logger.log("coordinates in publish: ", coordinates);
   Logger.log("radius: in publish", radius);
-  
+  lowerBoundHour = convertToFloat(hours.lowerBoundHour);
+  upperBoundHour = convertToFloat(hours.upperBoundHour);
+  console.log(lowerBoundHour , upperBoundHour);
   if (!coordinates.lon) {
     Logger.log("server dosent get coordinates");
     return;
   }
 
   Logger.log("server get coordinates");
-
+  // var start = moment(hours.lowerBoundHour).toDate();
+  // console.log(start);
   if (!radius)
     radius = 20000;
 
@@ -23,6 +34,10 @@ Meteor.publish("bars", function (coordinates, radius) {
         },
         $maxDistance: radius  //meters
       }
-    }
+    },
+    $or: [
+      {$and: [{startHappyHour: {$lt: lowerBoundHour}},{endHappyHour: {$gte: lowerBoundHour}}]},
+      {$and: [{startHappyHour: {$gt: lowerBoundHour}},{startHappyHour: {$lt: upperBoundHour}}]}
+    ]
   });
 });

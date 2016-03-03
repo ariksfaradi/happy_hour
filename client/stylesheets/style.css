@@ -1,3 +1,9 @@
+@font-face {
+  font-family: happyFont;
+  src: url("/fonts/happyFont1.ttf");
+}
+
+
 * {
   margin: 0;
   border: 0;
@@ -28,6 +34,8 @@ a {
 .navbar-default .navbar-brand {
     color: #ffffff;
     font-weight: bold;
+    font-family: happyFont;
+    font-size: 40px;
 } 
   .navbar-brand:visited {
     color: #ffffff;
@@ -84,16 +92,18 @@ a {
   background: #DADA92;
   margin-bottom: 15px;
   height: 92vh; 
+  font-family: happyFont;
 }
 
 .bar-name {
   margin-top: 10px;
   font-weight: bolder;  
+  font-size: 60px;
 }
 
 .primary-offer {
   height: 12vh;
-  font-size: 20px;
+  font-size: 50px;
 }
 
 .bar-buttons {
@@ -102,17 +112,18 @@ a {
   left: 0%;
   width: 100%
 }
+
 .navigate {
-  font-size: 18px;
+  font-size: 28px;
 }
 .details {
-  font-size: 18px;
+  font-size: 28px;
 }
 .reservation {
   color: #FF0000;
   /*background: #ffffff;*/
   font-weight: bold;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 
@@ -139,13 +150,6 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
 .modal-body {
   background-color: green;
 }
-
-/*.reservation-button {
-  display: none;
-  opacity: 0;
-  float: left;
-  width: 18px;
-}*/
 
 @media  screen and (max-width: 700px) {
   .container {

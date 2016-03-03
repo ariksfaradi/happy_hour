@@ -25,17 +25,38 @@ Template.addNewBar.events({
     if (!image2)
       image2 = "http://e-barnyc.com/wp-content/uploads/2014/05/20140423_Es_bar-9571_ENF.tif.jpg"; 
     
+    var veganFriendly = $(e.target).find('[name=veganFriendly]:checked').val() ? "Vegan Friendly" : null;
+    var lightKitchen = $(e.target).find('[name=lightKitchen]:checked').val() ? "light kitchen" : null;
+    var liveShows = $(e.target).find('[name=liveShows]:checked').val() ? "live shows" : null; 
+    var espressoFriends = $(e.target).find('[name=espressoFriends]:checked').val() ? "espresso & friends" : null;
+    var smokingArea = $(e.target).find('[name=smokingArea]:checked').val() ? "Outdoor smoking area" : null;
+
+    var start = moment($(e.target).find('[name=startTime]').val(),"HH:mm").toDate();
+    start = convertToFloat(start);
+    console.log("start: ", start);
+    
+
+
+
+    console.log("start= ", start);
     var newBar = {
       img1: image1,
       img2: image2,
       title: $(e.target).find('[name=title]').val(),
       offer: $(e.target).find('[name=offer]').val(),
+      startHappyHour: convertToFloat($(e.target).find('[name=startTime]').val()),
+      endHappyHour: convertToFloat($(e.target).find('[name=endTime]').val()),
       ageLimit: $(e.target).find('[name=ageLimit]').val(),
       url: $(e.target).find('[name=url]').val(),
       email: $(e.target).find('[name=email]').val(),
       mobile: $(e.target).find('[name=mobile]').val(),
       address: place.formatted_address,
-      loc : { type: "Point", coordinates: [ lon, lat ] }
+      loc : { type: "Point", coordinates: [ lon, lat ] },
+      veganFriendly: veganFriendly,
+      lightKitchen: lightKitchen,
+      liveShows: liveShows,
+      espressoFriends: espressoFriends,
+      smokingArea: smokingArea
     };
     console.log(newBar);
     Bars.insert(newBar);
@@ -44,4 +65,15 @@ Template.addNewBar.events({
     // $('#itemStore').focus();
     return false;
   }
+});
+
+Template.addNewBar.onRendered(function() {
+    this.$('#startTime').datetimepicker({
+      format: 'HH:mm',
+      // use24hours = true
+    });
+    this.$('#endTime').datetimepicker({
+      format: 'HH:mm',
+      // use24hours = true
+    });
 });

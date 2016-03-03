@@ -9,7 +9,9 @@ if (0 === Bars.find().count())
  	   		// coordinates : [ 34.80904420000002, 31.9013714 ]
  	   		coordinates : [ 34.80904420000002, 31.9013714 ]
 
-    	}
+    	},
+    	startHappyHour: 16.00,
+    	endHappyHour: 18.33
 	});
 
 	Bars.insert({
@@ -20,7 +22,9 @@ if (0 === Bars.find().count())
 		{
       		type : "Point",
       		coordinates : [ 34.80870010000001, 31.9020471 ]
-    	}
+    	},
+    	startHappyHour: 22.00,
+    	endHappyHour: 0.33
 	});
 
 	Bars.insert({
@@ -30,7 +34,11 @@ if (0 === Bars.find().count())
     	loc : {
       		type : "Point",
       		coordinates : [ 34.80937779999999, 31.9741452]
-    	}
+    	},
+    	startHappyHour: 19.00,
+    	endHappyHour: 20.30
+    	
+
 	});
 
 	Bars.insert({
@@ -40,7 +48,9 @@ if (0 === Bars.find().count())
     	loc : {
       		type : "Point",
       		coordinates : [34.79793070000005, 31.92405249999999 ]
-    	}
+    	},
+    	startHappyHour: 17.00,
+    	endHappyHour: 21.00
 
 	});
 }

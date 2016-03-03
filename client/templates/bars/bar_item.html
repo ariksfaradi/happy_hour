@@ -6,7 +6,7 @@
 
     <div class="bar-attribute">
     	
-      <div id="mycarousel" class="carousel slide" data-ride="carousel">
+      <div id="{{barId}}" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <div class="primary-offer">
@@ -16,6 +16,11 @@
           </div>
           <div class="item">
             <ul class="details">
+              <li>{{veganFriendly}}</li>
+              <li>{{lightKitchen}}</li>
+              <li>{{liveShows}}</li>
+              <li>{{espressoFriends}}</li>
+              <li>{{smokingArea}}</li>
               <li>{{address}}</li>
               <li>{{ageLimit}}</li>
               <li>{{domain}}</li>
@@ -24,7 +29,7 @@
               <li>yoyo</li>
               <li>check!!!</li>
             </ul>
-                      <a href="#mycarousel" role="button" data-slide="prev" class="left carousel-control">
+                      <a href="#barId" role="button" data-slide="prev" class="left carousel-control">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>      
@@ -36,7 +41,7 @@
         <li><a href="#" class="navigate btn btn-default">Navigate</a></li>
           
         <li>
-          <a href="#mycarousel" role="button" data-slide="next" class="details btn btn-default">more about <b>{{title}}</b></a> 
+          <a href="#barId" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
         </li>
 
         <li>{{ >reservation}}</li>

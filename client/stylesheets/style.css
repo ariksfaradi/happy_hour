@@ -25,7 +25,7 @@ a {
   z-index: 100;
   opacity: 0.90; 
   width: 100%;
-  background: #ac00e6;
+  background-image: url("/background/headerDigital.jpg");
   color: white;
   margin-bottom: 90px;
   text-align: center;  
@@ -61,7 +61,12 @@ a {
 }
 
 .navbar-default .navbar-toggle { 
-    background: #000000;
+    /*background: #000000;*/
+    background-image: url("/background/OPTIONS BUTTON hand made.jpg");
+    width: 50px;
+    height: 35px;
+    background-size: 100%;
+    /*background-repeat: no-repeat;    */
 }
 
 /*/////////////////////////////////////////////////////////////*/
@@ -90,6 +95,7 @@ a {
   position: relative;
   text-align: center;
   background: #DADA92;
+  background-image: url("/background/mainBackgroundDigital.jpg");
   margin-bottom: 15px;
   height: 92vh; 
   font-family: happyFont;
@@ -116,6 +122,16 @@ a {
 .navigate {
   font-size: 28px;
 }
+
+.navigate-button {
+  width: 50px;
+}
+
+.navigate-button:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
 .details {
   font-size: 28px;
 }

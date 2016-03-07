@@ -31,14 +31,6 @@ Template.addNewBar.events({
     var espressoFriends = $(e.target).find('[name=espressoFriends]:checked').val() ? "espresso & friends" : null;
     var smokingArea = $(e.target).find('[name=smokingArea]:checked').val() ? "Outdoor smoking area" : null;
 
-    var start = moment($(e.target).find('[name=startTime]').val(),"HH:mm").toDate();
-    start = convertToFloat(start);
-    console.log("start: ", start);
-    
-
-
-
-    console.log("start= ", start);
     var newBar = {
       img1: image1,
       img2: image2,

@@ -94,7 +94,6 @@ a {
 .bar-item {
   position: relative;
   text-align: center;
-  background: #DADA92;
   background-image: url("/background/mainBackgroundDigital.jpg");
   margin-bottom: 15px;
   height: 92vh; 

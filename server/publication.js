@@ -2,12 +2,6 @@ Bars._ensureIndex({'loc' : '2dsphere'});
 
 // hours>= start %% hours[0] <= end
 
-
-convertToFloat = function(hour) {
-  var retVal = hour.substr(0,2) + "." + hour.substr(3,4);
-  return parseFloat(retVal);
-}
-
 Meteor.publish("bars", function (coordinates, radius, hours) { 
   Logger.log("coordinates in publish: ", coordinates);
   Logger.log("radius: in publish", radius);

@@ -3,8 +3,8 @@ Bars._ensureIndex({'loc' : '2dsphere'});
 // hours>= start %% hours[0] <= end
 
 Meteor.publish("bars", function (coordinates, radius, hours) { 
-  Logger.log("coordinates in publish: ", coordinates);
-  Logger.log("radius: in publish", radius);
+  console.log("coordinates in publish: ", coordinates);
+  console.log("radius: in publish", radius);
   lowerBoundHour = convertToFloat(hours.lowerBoundHour);
   upperBoundHour = convertToFloat(hours.upperBoundHour);
   console.log(lowerBoundHour , upperBoundHour);

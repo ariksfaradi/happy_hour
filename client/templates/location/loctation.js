@@ -10,26 +10,31 @@ function AddHours(currentHour, hoursToAdd) {
 	return newHour;	
 }
 
-var location = Tracker.autorun(function () {
+
+function location() {
 	navigator.geolocation.getCurrentPosition(function(position) {
 		if ("geolocation" in navigator)
 		{
 			Logger.log("geolocation is avialiable");
+			Session.set('lon', position.coords.longitude);	
 			Session.set('lat', position.coords.latitude);
-        	Session.set('lon', position.coords.longitude);	
+        	
 		} else {
 			Logger.log("geolocation is not avialiable");
 		}
         
     }, error);
+}
 
+Tracker.autorun(function () {
+	location();
     Session.set('lowerBoundHour', moment(this.date).format("HH:mm"));
 	var upperBoundHour = AddHours(Session.get('lowerBoundHour'),4);
     console.log("lower: ", Session.get('lowerBoundHour') );
     console.log("upper: ", upperBoundHour );
 
 	var radius = Accounts.user() ? Accounts.user().profile.discoverySettings.radius : 20000;
-	return Meteor.subscribe("bars", {lon: Session.get('lon'), lat: Session.get('lat')}, radius, 
+	Meteor.subscribe("bars", {lon: Session.get('lon'), lat: Session.get('lat')}, radius, 
 							{lowerBoundHour:Session.get('lowerBoundHour'),upperBoundHour:upperBoundHour} );
 });
     

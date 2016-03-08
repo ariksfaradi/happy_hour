@@ -1,6 +1,6 @@
 @font-face {
   font-family: happyFont;
-  src: url("/fonts/happyFont1.ttf");
+  src: url("/fonts/happyEnglishHebrew.ttf");
 }
 
 
@@ -94,7 +94,9 @@ a {
 .bar-item {
   position: relative;
   text-align: center;
-  background-image: url("/background/mainBackgroundDigital.jpg");
+  background-image: url("/background/mainBackgroundDigital1.jpg");
+  background-size: 92vh;
+  background-position: center;
   margin-bottom: 15px;
   height: 92vh; 
   font-family: happyFont;
@@ -110,12 +112,16 @@ a {
   height: 12vh;
   font-size: 50px;
 }
-
+.btn {
+  padding: 1px 3px;
+  line-height: 1.2;
+  border-radius: 18px;  
+}
 .bar-buttons {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   left: 0%;
-  width: 100%
+  width: 100%;
 }
 
 .navigate {
@@ -124,6 +130,8 @@ a {
 
 .navigate-button {
   width: 50px;
+  height: 30px;
+  border-radius: 18px;
 }
 
 .navigate-button:hover {
@@ -134,9 +142,12 @@ a {
 .details {
   font-size: 28px;
 }
+
 .reservation {
-  color: #FF0000;
+  /*color: #FF0000;*/
   /*background: #ffffff;*/
+  color: #ffffff;
+  background: #ff6666;
   font-weight: bold;
   font-size: 28px;
 }

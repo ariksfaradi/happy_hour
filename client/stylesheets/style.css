@@ -23,7 +23,6 @@ a {
 .header {
   position: fixed;
   z-index: 100;
-  opacity: 0.90; 
   width: 100%;
   background-image: url("/background/headerDigital.jpg");
   color: white;

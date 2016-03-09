@@ -51,9 +51,13 @@ Template.addNewBar.events({
       smokingArea: smokingArea
     };
 
-    Meteor.call('barInsert', bar, function(error, result) {
-      if (error)
-        return alert(error.reason);
+      Meteor.call('barInsert', bar, function(error, result) {
+        if (error)
+          return alert(error.reason);
+
+      if (result.barExists) {
+        alert("This bar has already exists");
+      }
 
       Router.go('barsList');
     });

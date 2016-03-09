@@ -13,7 +13,7 @@ in the next step the app should support in a user input page of adding new bar.
 	npm-container
 	meteorhacks:npm
 	dubrles:google-maps
-	aldeed:geocoder
+7	aldeed:geocoder
 
 
 	added twbs:bootstrap
@@ -27,3 +27,5 @@ in the next step the app should support in a user input page of adding new bar.
 
 09.03
 	added dburles:google-maps to create map
+	added check
+	added audit-argument-checks - for security check

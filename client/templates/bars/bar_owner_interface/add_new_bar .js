@@ -50,10 +50,13 @@ Template.addNewBar.events({
       espressoFriends: espressoFriends,
       smokingArea: smokingArea
     };
-    console.log(bar);
-    bar._id = Bars.insert(bar);
- 
-    Router.go('barsList');
+
+    Meteor.call('barInsert', bar, function(error, result) {
+      if (error)
+        return alert(error.reason);
+
+      Router.go('barsList');
+    });
   }
 });
 

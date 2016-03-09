@@ -176,6 +176,18 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
   background-color: green;
 }
 
+/*____________ map ________________*/
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+}
+
+.edit-button {
+  font-family: happyFont;
+  font-size: 40px
+}
+
 @media  screen and (max-width: 700px) {
   .container {
     padding-right: 0px;

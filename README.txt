@@ -24,3 +24,6 @@ in the next step the app should support in a user input page of adding new bar.
 	added tsega:bootstrap3-datetimepicker for time input type
 01.03
 	added moment.js for time formats
+
+09.03
+	added dburles:google-maps to create map

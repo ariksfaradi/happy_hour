@@ -3,7 +3,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
   {
     Logger.log("geolocation is avialiable");
     Session.set('lat', position.coords.latitude);
-        Session.set('lon', position.coords.longitude);  
+    Session.set('lon', position.coords.longitude);  
   } else {
     Logger.log("geolocation is not avialiable");
   }
@@ -39,8 +39,7 @@ Template.barItem.helpers({
   },
   distance: function() {
     var currentPostion = {lng: Session.get('lon'), lat: Session.get('lat')};
-    var barPosition = {lng: this.loc.coordinates[0], lat: this.loc.coordinates[1]};
-        
+    barPosition = {lng: this.loc.coordinates[0], lat: this.loc.coordinates[1]};
     var distance = getDistance(currentPostion,barPosition);
     var unit = "m";
 
@@ -49,6 +48,10 @@ Template.barItem.helpers({
       unit = "km";
     }   
     return distance + unit;
+  },
+
+  editPermit: function() {
+    return this.userId === Meteor.userId() || 'admin' === Meteor.user().roles[0]; 
   }
 
 });

@@ -31,7 +31,7 @@ Template.addNewBar.events({
     var espressoFriends = $(e.target).find('[name=espressoFriends]:checked').val() ? "espresso & friends" : null;
     var smokingArea = $(e.target).find('[name=smokingArea]:checked').val() ? "Outdoor smoking area" : null;
 
-    var newBar = {
+    var bar = {
       img1: image1,
       img2: image2,
       title: $(e.target).find('[name=title]').val(),
@@ -50,12 +50,10 @@ Template.addNewBar.events({
       espressoFriends: espressoFriends,
       smokingArea: smokingArea
     };
-    console.log(newBar);
-    Bars.insert(newBar);
+    console.log(bar);
+    bar._id = Bars.insert(bar);
  
-    $('#addNewBarForm').find('input:text').val('');
-    // $('#itemStore').focus();
-    return false;
+    Router.go('barsList');
   }
 });
 

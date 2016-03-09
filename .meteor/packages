@@ -24,7 +24,6 @@ iron:router
 
 
 
-mrt:googlemaps
 accounts-password
 accounts-base
 accounts-facebook
@@ -37,3 +36,5 @@ aldeed:collection2
 momentjs:moment
 alanning:roles
 tsega:bootstrap3-datetimepicker
+mrt:googlemaps
+reactive-var

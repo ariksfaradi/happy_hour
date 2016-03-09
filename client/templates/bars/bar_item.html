@@ -26,10 +26,8 @@
               <li>{{domain}}</li>
               <li>{{email}}</li>
               <li>{{mobile}}</li>
-              <li>yoyo</li>
-              <li>check!!!</li>
             </ul>
-                      <a href="#barId" role="button" data-slide="prev" class="left carousel-control">
+          <a href="#barId" role="button" data-slide="prev" class="left carousel-control">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>      
@@ -38,7 +36,7 @@
       </div>
 
       <ul class="bar-buttons">
-        <li><a href="#" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>
+        <li><a href="{{pathFor 'navigationMap'}}" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>
           
         <li>
           <a href="#barId" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
@@ -68,7 +66,7 @@
         <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
 	    	<li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
       </ul> -->
-
+        {{#if editPermit}}<a href="{{pathFor 'barEdit'}}" class="edit-button">Edit</a>{{/if}}
 	    </div>
   </div>
 </template>

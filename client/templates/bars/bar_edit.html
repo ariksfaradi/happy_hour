@@ -6,28 +6,28 @@
 	      <div class="form-group">
 	        <label for="img1" class="col-sm-2 control-label"> Image 1:</label>
 	        <div class="col-sm-10">
-	          <input type="text" id="img1" name="img1" class="form-control" placeholder="Enter first image url">
+	          <input type="text" id="img1" name="img1" value="{{img1}}" class="form-control" placeholder="Enter first image url">
 	        </div>      
 	      </div>
 
 	      <div class="form-group">
 	        <label for="img2" class="col-sm-2 control-label">Image 2:</label>
 	        <div class="col-sm-10">
-	          <input type="text" id="img2" name="img2" class="form-control" placeholder="Enter second image url">
+	          <input type="text" id="img2" name="img2" value="{{img2}}" class="form-control" placeholder="Enter second image url">
 	        </div>
 	      </div>
 
 	      <div class="form-group">
 	        <label for="title" class="col-sm-2 control-label">Bar's Name:</label>
 	        <div class="col-sm-10">
-	          <input type="text" id="title" name="title" class="form-control" placeholder="Enter bar's name">  
+	          <input type="text" id="title" name="title" value="{{title}}" class="form-control" placeholder="Enter bar's name">  
 	        </div>
 	      </div>
 	          
 	      <div class="form-group">
 	        <label for="offer" class="col-sm-2 control-label">Your Offer:</label>
 	        <div class="col-sm-10">
-	          <input type="text" id="offer" name="offer" class="form-control" placeholder="Enter your offer">
+	          <input type="text" id="offer" name="offer" value="{{offer}}" class="form-control" placeholder="Enter your offer">
 	        </div>
 	      </div>
 
@@ -36,13 +36,13 @@
 	        <div class="col-sm-5 col-xs-4">
 	          <div class="input-group datetimepicker" id="startTime">
 	            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-	            <input type="text" name="startTime" class="set-due-date form-control" placeholder="Start Hour">
+	            <input type="text" name="startTime" value="{{startTime}}" class="set-due-date form-control" placeholder="Start Hour">
 	          </div>
 	        </div>
 	        <div class="col-sm-5 col-xs-4" >
 	          <div class="input-group datetimepicker" id="endTime">
 	            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-	            <input type="text" name="endTime" class="set-due-date form-control" placeholder="End Hour">
+	            <input type="text" name="endTime" value="{{endTime}}" class="set-due-date form-control" placeholder="End Hour">
 	          </div>
 	        </div>
 	      </div>
@@ -50,24 +50,24 @@
 	      <div class="form-group">
 	        <label for="ageLimit" class="col-sm-2 control-label">Age Limit:</label>
 	        <div class="col-sm-10">
-	          <input type="number" id="ageLimit" name="ageLimit" class="form-control" min="18" max="120">
+	          <input type="number" id="ageLimit" name="ageLimit" value="{{ageLimit}}" class="form-control" min="18" max="120">
 	        </div>        
 	      </div>      
 	      
 	      <div class="form-group">
 	        <label for="webPage" class="col-sm-2 control-label">Home Page:</label>
 	        <div class="col-sm-10">
-	          <input type="url" id="url" name="url" class="form-control">
+	          <input type="url" id="url" name="url" value="{{url}}" class="form-control">
 	        </div>        
 	      </div>        
 
 	      <legend>About</legend>
 	      <div class="checkbox">
-	        <label><input type="checkbox" name="veganFriendly">Vegan friendly</label>
-	        <label><input type="checkbox" name="lightKitchen">light kitchen</label>
-	        <label><input type="checkbox" name="liveShows">live shows</label>
-	        <label><input type="checkbox" name="espressoFriends">espresso & friend</label>
-	        <label><input type="checkbox" name="smokingArea">outdor smoking area</label>
+	        <label><input type="checkbox" name="veganFriendly" value="{{veganFriendly}}">Vegan friendly</label>
+	        <label><input type="checkbox" name="lightKitchen" value="{{lightKithen}}">light kitchen</label>
+	        <label><input type="checkbox" name="liveShows" value="{{liveShows}}">live shows</label>
+	        <label><input type="checkbox" name="espressoFriends" value="{{esperssoFriends}}">espresso & friend</label>
+	        <label><input type="checkbox" name="smokingArea" value="{{smokingArea}}">outdor smoking area</label>
 	      </div>
 
 	      <legend>Your Contact information:</legend>
@@ -83,7 +83,7 @@
 	          </div>
 	        </div>
 	        <div class="col-xs-5 col-sm-6 col-md-7">
-	          <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Tel. number">
+	          <input type="tel" id="mobile" name="mobile" class="form-control" value="{{mobile}}" placeholder="Tel. number">
 	        </div>
 	            
 	      </div>
@@ -91,13 +91,13 @@
 	      <div class="form-group">
 	        <label for="email" class="col-sm-2 control-label">Email:</label>
 	        <div class="col-sm-10">
-	          <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+	          <input type="email" id="email" name="email" class="form-control" value="{{email}}" placeholder="Email">
 	        </div>       
 	      </div>      
 
 	    </div>   
 	  	<input type="submit" value="Submit" class="btn btn-success">
-	    <a href="#" class="btn btn-danger">Delete bar</a>
+	    <a href="#" class="btn btn-danger delete">Delete bar</a>
 	  </form>
 	</div>
 

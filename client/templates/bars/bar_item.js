@@ -51,7 +51,7 @@ Template.barItem.helpers({
   },
 
   editPermit: function() {
-    return this.userId === Meteor.userId() || 'admin' === Meteor.user().roles[0]; 
+    return  Meteor.user() && (this.userId === Meteor.userId() || 'admin' === Meteor.user().roles[0]); 
   }
 
 });

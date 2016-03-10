@@ -30,8 +30,6 @@ Tracker.autorun(function () {
 	location();
     Session.set('lowerBoundHour', moment(this.date).format("HH:mm"));
 	var upperBoundHour = AddHours(Session.get('lowerBoundHour'),4);
-    console.log("lower: ", Session.get('lowerBoundHour') );
-    console.log("upper: ", upperBoundHour );
 
 	var radius = Accounts.user() ? Accounts.user().profile.discoverySettings.radius : 20000;
 	Meteor.subscribe("bars", {lon: Session.get('lon'), lat: Session.get('lat')}, radius, 

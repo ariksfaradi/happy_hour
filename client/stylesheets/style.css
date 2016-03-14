@@ -158,13 +158,13 @@ a {
   text-align: bottom;
 }
 
+
 .image {
-  display: inline-block;
-  width: 49%;
-  border: 1px solid navy;
+  display: inline;
+  width: 48.5%;
   height: 31vh;
-  background: #B2C6D0;
-  margin: 0px
+  border: none;
+  margin: -0.6%
 }
 
 a.share:hover, a.shre:visited a.like:hover, a.like:visited {

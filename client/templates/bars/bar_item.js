@@ -52,6 +52,22 @@ Template.barItem.helpers({
 
   editPermit: function() {
     return  Meteor.user() && (this.userId === Meteor.userId() || 'admin' === Meteor.user().roles[0]); 
+  },
+
+  barLat: function() {
+    return this.loc.coordinates[1];
+  },
+
+  barLng: function() {
+    return this.loc.coordinates[0];  
+  },
+
+  currLat: function() {
+    return Session.get('lat');
+  },
+
+  currLng: function() {
+    return Session.get('lon');
   }
 
 });

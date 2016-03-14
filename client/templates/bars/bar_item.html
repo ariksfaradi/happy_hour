@@ -39,8 +39,8 @@
       </div>
 
       <ul class="bar-buttons">
-        <li><a href="{{pathFor 'googleMaps'}}" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>
-          
+      <!--   <li><a href="{{pathFor 'googleMaps'}}" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>
+       -->  <li><a href="http://maps.google.com/maps?saddr={{currLat}},{{currLng}}&daddr={{barLat}},{{barLng}}&navigate=yes" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>  
         <li>
           <a href="#barId" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
         </li>
@@ -73,15 +73,3 @@
 	    </div>
   </div>
 </template>
-
-<!-- <li class="dropdown">
-
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media</a>
-    <ul class="dropdown-menu">
-        <li><a href="#">Twiter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Google+</a></li>
-        <li><a href="#">Instegram</a></li>
-    </ul>
-
-</li>    -->

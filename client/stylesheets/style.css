@@ -108,7 +108,7 @@ a {
 }
 
 .primary-offer {
-  height: 12vh;
+  height: 30vh;
   font-size: 50px;
 }
 .btn {
@@ -116,8 +116,12 @@ a {
   line-height: 1.2;
   border-radius: 18px;  
 }
+
+.bar-attribute {
+  
+}
+
 .bar-buttons {
-  /*position: absolute;*/
   bottom: 0;
   left: 0%;
   width: 100%;
@@ -201,6 +205,11 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
 
   .bar-item {
     max-height: 100%;
+  }
+
+  .primary-offer {
+    height: 25vh;
+    font-size: 50px;
   }  
 }
 
@@ -209,6 +218,11 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
   .container {
     padding-right: 0px;
     padding-left: 0px;
+  }
+
+  .primary-offer {
+    height: 30vh;
+    font-size: 50px;
   }
 }
 

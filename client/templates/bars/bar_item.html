@@ -1,20 +1,39 @@
 <template name="barItem">
   <div class="bar-item">
-  <div class="row">
-    <img class="image" src="{{img1}}">
-    <img class="image" src="{{img2}}">
-  </div> 
+    <div class="row">
+      <img class="image" src="{{img1}}">
+      <img class="image" src="{{img2}}">
+    </div>
+    <h2 class="bar-name">{{title}}</h2> 
+
+    <div class="primary-offer">
+      {{offer}}
+      <div>
+        {{hours}}   
+      </div>
+    </div>    
+
+    <ul class="bar-buttons">
+
+      <li><a href="http://maps.google.com/maps?saddr={{currLat}},{{currLng}}&daddr={{barLat}},{{barLng}}&navigate=yes" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>  
+      <li>
+      <a href="#"  class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
+      </li>
+
+      <li>{{ >reservation}}</li>
+      <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
+      <li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
+    </ul>
+ 
+<!--    
     
-    <h2 class="bar-name">{{title}}</h2>
 
     <div class="bar-attribute">
     	
       <div id="{{barId}}" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <div class="primary-offer">
-              {{offer}} 
-            </div>         
+         
            
           </div>
           <div class="item">
@@ -38,38 +57,9 @@
         </div>
       </div>
 
-      <ul class="bar-buttons">
-      <!--   <li><a href="{{pathFor 'googleMaps'}}" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>
-       -->  <li><a href="http://maps.google.com/maps?saddr={{currLat}},{{currLng}}&daddr={{barLat}},{{barLng}}&navigate=yes" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>  
-        <li>
-          <a href="#barId" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
-        </li>
-
-        <li>{{ >reservation}}</li>
-        <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
-        <li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
-      </ul> 
+      
     	
-
-<!--       <ul class="bar-buttons">
-        <li><a href="#" class="navigate btn btn-default">Navigate</a></li>
-          
-        <li><a href="#" class="details dropdown-toggle btn-default btn" data-toggle="collapse" data-target=".details">more about <b>{{title}}</b> <b class="caret"></b></a></li>
-          
-          <ul class="collapse details">
-            <li>{{address}}</li>
-            <li>{{ageLimit}}</li>
-            <li>{{domain}}</li>
-            <li>{{email}}</li>
-            <li>{{mobile}}</li>
-            <li>yoyo</li>
-          </ul>    
-	    	
-	    	<li>{{ >reservation}}</li>
-        <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
-	    	<li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
-      </ul> -->
         {{#if editPermit}}<a href="{{pathFor 'barEdit'}}" class="edit-button">Edit</a>{{/if}}
 	    </div>
-  </div>
+ -->  </div>
 </template>

@@ -25,6 +25,15 @@ Template.barEdit.events({
 		console.log("startTime: ", startTime);
 		console.log("endTime: ", endTime);
 
+	    var veganFriendly = $(e.target).find('[name=veganFriendly]:checked').val() ? "Vegan Friendly" : null;
+	    var lightKitchen = $(e.target).find('[name=lightKitchen]:checked').val() ? "light kitchen" : null;
+	    var liveShows = $(e.target).find('[name=liveShows]:checked').val() ? "live shows" : null; 
+	    var espressoFriends = $(e.target).find('[name=espressoFriends]:checked').val() ? "espresso & friends" : null;
+	    var smokingArea = $(e.target).find('[name=smokingArea]:checked').val() ? "Outdoor smoking area" : null;
+	    var gayFriendly = $(e.target).find('[name=gayFriendly]:checked').val() ? "gay friendly" : null;
+	    var dogAllowd = $(e.target).find('[name=dogAllowd]:checked').val() ? "dog allowd" : null;
+	    var acInside = $(e.target).find('[name=acInside]:checked').val() ? "ac inside" : null;
+
 		var barProperties = {
 			img1: $(e.target).find('[name=img1]').val(),
 			img2: $(e.target).find('[name=img2]').val(),
@@ -33,14 +42,17 @@ Template.barEdit.events({
 			startHappyHour: startTime,
 			endHappyHour: endTime,
 			ageLimit: $(e.target).find('[name=ageLimit]').val(),
-			// url: $(e.target).find('[name=url]').val(),
-			// email: $(e.target).find('[name=email]').val(),
-			// mobile: $(e.target).find('[name=mobile]').val(),
-			// veganFriendly: $(e.target).find('[name=veganFriendly]:checked').val(),
-			// lightKitchen: $(e.target).find('[name=lightKitchen]:checked').val(),
-			// liveShows: $(e.target).find('[name=liveShows]:checked').val(),
-			// espressoFriends: $(e.target).find('[name=espressoFriends]:checked').val(),
-  	// 		smokingArea: $(e.target).find('[name=smokingArea]:checked').val()			
+			url: $(e.target).find('[name=url]').val(),
+			email: $(e.target).find('[name=email]').val(),
+			mobile: $(e.target).find('[name=mobile]').val(),
+			veganFriendly: veganFriendly,
+			lightKitchen: lightKitchen,
+			liveShows: liveShows,
+			espressoFriends: espressoFriends,
+			smokingArea: smokingArea,
+			gayFriendly: gayFriendly,
+			dogAllowd: dogAllowd,
+			acInside: acInside
 		}
 
 		console.log(barProperties);

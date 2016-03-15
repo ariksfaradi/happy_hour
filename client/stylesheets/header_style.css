@@ -1,0 +1,51 @@
+/*______________________________Header styles______________________________*/
+
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-image: url("/background/headerDigital.jpg");
+  color: white;
+  margin-bottom: 90px;
+  text-align: center;  
+}
+
+.navbar-default .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: happyFont;
+    font-size: 40px;
+} 
+  .navbar-brand:visited {
+    color: #ffffff;
+  }
+
+.navbar-default .navbar-collapse {
+   border: none;
+   border-color: none; 
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    background: #39925E;
+    /*height: 100%;*/
+  }
+
+.login {
+  color: black;
+  text-align: right;
+}
+
+.navbar-default .navbar-toggle { 
+    /*background: #000000;*/
+    background-image: url("/background/OPTIONS BUTTON hand made.jpg");
+    width: 50px;
+    height: 35px;
+    background-size: 100%;
+    /*background-repeat: no-repeat;    */
+}
+
+/*/////////////////////////////////////////////////////////////*/

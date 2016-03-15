@@ -1,0 +1,92 @@
+.bar-item {
+  position: relative;
+  text-align: center;
+  background-image: url("/background/mainBackgroundDigital1.jpg");
+  background-size: 92vh;
+  background-position: center;
+  margin-bottom: 15px;
+  height: 92vh; 
+  font-family: happyFont;
+}
+
+.bar-name {
+  margin-top: 10px;
+  font-weight: bolder;  
+  font-size: 60px;
+}
+
+.primary-offer {
+  font-size: 50px;
+  height: 30vh;
+}
+
+.bar-attribute {
+    
+}
+
+.share, .like {
+  color: #ac00e6;
+  font-size: 200%;
+  text-align: bottom;
+  display: inline;
+}
+
+.edit-button {
+  font-family: happyFont;
+  /*font-size: 40px*/
+  display: inline;
+}
+
+.image {
+  display: inline;
+  width: 48.5%;
+  height: 31vh;
+  border: none;
+  margin: -0.6%
+}
+
+@media  screen and (max-width: 700px) {
+  .bar-item {
+    max-height: 100%;
+  }
+
+  .bar-name {
+    font-size: 40px;
+  }
+
+
+  .primary-offer {
+    font-size: 30px;
+    height: 20vh;
+  }
+
+  .share, .like {
+  color: #ac00e6;
+  font-size: 150%;
+  text-align: bottom;
+}
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 960px) {
+  /*medium size*/
+  .bar-name {
+    font-size: 60px;
+  }
+  .primary-offer {
+    font-size: 30px;
+    height: 30vh;
+  }
+}
+
+@media  screen and (max-height: 400px) {
+  .primary-offer {
+    font-size: 30px;
+    height: 15vh;
+  }
+
+}
+
+@media  screen and (min-height: 600px) and (max-height: 900px){
+
+}

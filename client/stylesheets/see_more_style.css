@@ -1,0 +1,41 @@
+.details {
+  color: #000000;
+}
+
+.see_more_icon {
+	list-style: none;
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+}
+
+.see_more_icon[data-type="vegan-friendly-icon"] {
+	background-image: url("/see_more_icons/Vegan_friendly.jpg");
+}
+
+.see_more_icon[data-type="light-kitchen-icon"] {
+	background-image: url("/see_more_icons/light_kitchen.jpg");
+}
+
+.see_more_icon[data-type="live-shows"] {
+	background-image: url("/see_more_icons/live_shows.jpg");
+}
+
+.see_more_icon[data-type="espresso-friends"] {
+	background-image: url("/see_more_icons/espresso_and_friends.jpg");
+}
+
+.see_more_icon[data-type="smoking-area"] {
+	background-image: url("/see_more_icons/smoking_area.jpg");
+}
+
+.see_more_icon[data-type="ac-inside"] {
+	background-image: url("/see_more_icons/ac_inside.jpg");
+}
+
+.see_more_icon[data-type="gay-friendly"] {
+	background-image: url("/see_more_icons/gay_friendly.jpg");
+}
+
+.see_more_icon[data-type="dog-allowd"] {
+	background-image: url("/see_more_icons/dogs_allowed.jpg");
+}

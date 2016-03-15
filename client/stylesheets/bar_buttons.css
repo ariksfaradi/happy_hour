@@ -1,0 +1,81 @@
+.bar-buttons {
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+}
+
+
+.navigate {
+  font-size: 28px;
+}
+
+.navigate-button {
+  width: 40px;
+  height: 30px;
+  border-radius: 18px;
+}
+
+.navigate-button:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.details {
+  font-size: 28px;
+}
+
+.reservation {
+  /*color: #FF0000;*/
+  /*background: #ffffff;*/
+  color: #ffffff;
+  background: #ff6666;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+@media  screen and (max-width: 700px) {
+  .navigate {
+    font-size: 20px;
+  }
+
+  .navigate-button {
+    width: 40px;
+    height: 30px;
+    border-radius: 18px;
+  }
+
+  .navigate-button:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
+
+  .details {
+    font-size: 20px;
+  }
+
+  .reservation {
+    /*color: #FF0000;*/
+    /*background: #ffffff;*/
+    color: #ffffff;
+    background: #ff6666;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 960px) {
+  /*medium size*/
+  .navigate {
+    font-size: 38px;
+  }
+
+  .details {
+    font-size: 28px;
+  }
+
+  .reservation {
+    font-size: 28px;
+  }
+
+}

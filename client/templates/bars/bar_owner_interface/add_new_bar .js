@@ -30,6 +30,9 @@ Template.addNewBar.events({
     var liveShows = $(e.target).find('[name=liveShows]:checked').val() ? "live shows" : null; 
     var espressoFriends = $(e.target).find('[name=espressoFriends]:checked').val() ? "espresso & friends" : null;
     var smokingArea = $(e.target).find('[name=smokingArea]:checked').val() ? "Outdoor smoking area" : null;
+    var gayFreindly = $(e.target).find('[name=gayFreindly]:checked').val() ? "gay friendly" : null;
+    var dogAllowd = $(e.target).find('[name=dogAllowd]:checked').val() ? "dog allowd" : null;
+    var acInside = $(e.target).find('[name=acInside]:checked').val() ? "ac inside" : null;
 
     var bar = {
       img1: image1,

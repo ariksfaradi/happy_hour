@@ -16,20 +16,37 @@
               {{hours}}   
             </div>
           </div>    
+          <ul class="bar-buttons">
+
+            <li><a href="http://maps.google.com/maps?saddr={{currLat}},{{currLng}}&daddr={{barLat}},{{barLng}}&navigate=yes" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>  
+            <li>
+              <a href="#{{barId}}" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
+            </li>
+
+            <li>{{ >reservation}}</li>
+
+          </ul>        
+
         </div>
+
+
         <div class="item">
           <ul class="details">
-            <li>{{veganFriendly}}</li>
-            <li>{{lightKitchen}}</li>
-            <li>{{liveShows}}</li>
-            <li>{{espressoFriends}}</li>
-            <li>{{smokingArea}}</li>
+            <li class="see_more_icon" data-type="vegan-friendly-icon"> {{veganFriendly}}</li>
+            <li class="see_more_icon" data-type="light-kitchen-icon">{{lightKitchen}}</li>
+            <li class="see_more_icon" data-type="live-shows">{{liveShows}}</li>
+            <li class="see_more_icon" data-type="espresso-friends">{{espressoFriends}}</li>
+            <li class="see_more_icon" data-type="smoking-area">{{smokingArea}}</li>
+            <li class="see_more_icon" data-type="ac-inside">{{acInside}}</li>
+            <li class="see_more_icon" data-type="gay-friendly">{{gayFriendly}}</li>
+            <li class="see_more_icon" data-type="dog-allowd">{{dogAllowd}}</li>
+            
+
             <li>{{address}}</li>
             <li>{{ageLimit}}</li>
             <li>{{domain}}</li>
             <li>{{email}}</li>
             <li>{{mobile}}</li>
-            <li>Olla</li>
           </ul>
           <a href="#{{barId}}" role="button" data-slide="prev" class="left carousel-control">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -37,41 +54,14 @@
           </a>      
         </div>            
       </div>
-    </div>
+    </div>  <!-- Carousel -->
 
-
-
-    <ul class="bar-buttons">
-
-      <li><a href="http://maps.google.com/maps?saddr={{currLat}},{{currLng}}&daddr={{barLat}},{{barLng}}&navigate=yes" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>  
-      <li>
-      <a href="#{{barId}}" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
-      </li>
-
-      <li>{{ >reservation}}</li>
-      <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
-      <li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
+  
+    <ul>
+      <a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a>
+      {{#if editPermit}}<a class="edit-button" href="{{pathFor 'barEdit'}}">Edit</a>{{/if}}
+      <a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a>
     </ul>
-
-    {{#if editPermit}}<a href="{{pathFor 'barEdit'}}" class="edit-button">Edit</a>{{/if}}  
-<!--    
     
-
-    <div class="bar-attribute">
-    	
-      <div id="{{barId}}" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-         
-           
-          </div>
-          
-        </div>
-      </div>
-
-      
-    	
-
-	    </div>
- -->  </div>
+  </div>
 </template>

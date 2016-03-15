@@ -20,18 +20,18 @@ Meteor.publish("bars", function (coordinates, radius, hours) {
     radius = 20000;
 
     return Bars.find({
-    loc: {
-      $near:{
-        $geometry: {
-          type: "Point",
-          coordinates : [ coordinates.lon, coordinates.lat]  
-        },
-        $maxDistance: radius  //meters
-      }
-    },
-    $or: [
-      {$and: [{startHappyHour: {$lt: lowerBoundHour}},{endHappyHour: {$gte: lowerBoundHour}}]},
-      {$and: [{startHappyHour: {$gt: lowerBoundHour}},{startHappyHour: {$lt: upperBoundHour}}]}
-    ]
-  });
+      loc: {
+        $near:{
+          $geometry: {
+            type: "Point",
+            coordinates : [ coordinates.lon, coordinates.lat]  
+          },
+          $maxDistance: radius  //meters
+        }
+      },
+      $or: [
+        {$and: [{startHappyHour: {$lt: lowerBoundHour}},{endHappyHour: {$gte: lowerBoundHour}}]},
+        {$and: [{startHappyHour: {$gt: lowerBoundHour}},{startHappyHour: {$lt: upperBoundHour}}]}
+      ]
+    });
 });

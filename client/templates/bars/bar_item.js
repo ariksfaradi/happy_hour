@@ -29,12 +29,13 @@ var getDistance = function(point1, point2) {
 
 
 var hourRepresentation = function(hour) {
-  var retVal = hour.substr(0,2) + ":" + hour.substr(3,4);
-  if (retVal.length <= 3) {
-    retVal += "00";
+  var retVal = hour.toFixed(2);
+
+  retVal = retVal.toString();
+  if ('.' === retVal[1]) {
+    return '0' + retVal[0] + ':' + retVal.substr(2,3) ;
   }
-  
-  return retVal;
+  return retVal.substr(0,2) + ':' + retVal.substr(3,4);
 }
 
 Template.barItem.helpers({
@@ -81,8 +82,8 @@ Template.barItem.helpers({
   },
 
   hours: function() {
-    var start = hourRepresentation(this.startHappyHour.toString());
-    var end = hourRepresentation(this.endHappyHour.toString());
+    var start = hourRepresentation(this.startHappyHour);
+    var end = hourRepresentation(this.endHappyHour);
 
     return "happy hour time: " + start + " - " + end;
   }

@@ -6,25 +6,54 @@
     </div>
     <h2 class="bar-name">{{title}}</h2> 
 
-    <div class="primary-offer">
-      {{offer}}
-      <div>
-        {{hours}}   
+    <div id="{{barId}}" class="carousel slide" data-ride="carousel">
+      
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="primary-offer">
+            {{offer}}
+            <div>
+              {{hours}}   
+            </div>
+          </div>    
+        </div>
+        <div class="item">
+          <ul class="details">
+            <li>{{veganFriendly}}</li>
+            <li>{{lightKitchen}}</li>
+            <li>{{liveShows}}</li>
+            <li>{{espressoFriends}}</li>
+            <li>{{smokingArea}}</li>
+            <li>{{address}}</li>
+            <li>{{ageLimit}}</li>
+            <li>{{domain}}</li>
+            <li>{{email}}</li>
+            <li>{{mobile}}</li>
+            <li>Olla</li>
+          </ul>
+          <a href="#{{barId}}" role="button" data-slide="prev" class="left carousel-control">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>      
+        </div>            
       </div>
-    </div>    
+    </div>
+
+
 
     <ul class="bar-buttons">
 
       <li><a href="http://maps.google.com/maps?saddr={{currLat}},{{currLng}}&daddr={{barLat}},{{barLng}}&navigate=yes" class="navigate btn btn-default">{{distance}}<span><img class="navigate-button" src="/background/NAVIGATE BUTTON hand made.jpg"></span></a></li>  
       <li>
-      <a href="#"  class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
+      <a href="#{{barId}}" role="button" data-slide="next" class="details btn btn-default" id="moreAbout">more about <b>{{title}}</b></a> 
       </li>
 
       <li>{{ >reservation}}</li>
       <li class=""><a class="share pull-left" href="#"><span class="fa fa-share-alt"></span></a></li>
       <li class=""><a href="#" class="like pull-right"><span class="glyphicon glyphicon-heart"></span></a></li>
     </ul>
- 
+
+    {{#if editPermit}}<a href="{{pathFor 'barEdit'}}" class="edit-button">Edit</a>{{/if}}  
 <!--    
     
 
@@ -36,30 +65,13 @@
          
            
           </div>
-          <div class="item">
-            <ul class="details">
-              <li>{{veganFriendly}}</li>
-              <li>{{lightKitchen}}</li>
-              <li>{{liveShows}}</li>
-              <li>{{espressoFriends}}</li>
-              <li>{{smokingArea}}</li>
-              <li>{{address}}</li>
-              <li>{{ageLimit}}</li>
-              <li>{{domain}}</li>
-              <li>{{email}}</li>
-              <li>{{mobile}}</li>
-            </ul>
-          <a href="#barId" role="button" data-slide="prev" class="left carousel-control">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>      
-          </div>
+          
         </div>
       </div>
 
       
     	
-        {{#if editPermit}}<a href="{{pathFor 'barEdit'}}" class="edit-button">Edit</a>{{/if}}
+
 	    </div>
  -->  </div>
 </template>

@@ -13,15 +13,12 @@
   margin-top: 10px;
   font-weight: bolder;  
   font-size: 60px;
+  height: 3vh;
 }
 
 .primary-offer {
   font-size: 50px;
-  height: 30vh;
-}
-
-.bar-attribute {
-    
+  height: 27vh;
 }
 
 .share, .like {
@@ -57,7 +54,7 @@
 
   .primary-offer {
     font-size: 30px;
-    height: 20vh;
+    /*height: 20vh;*/
   }
 
   .share, .like {
@@ -75,15 +72,12 @@
   }
   .primary-offer {
     font-size: 30px;
-    height: 30vh;
+    /*height: 30vh;*/
   }
 }
 
-@media  screen and (max-height: 400px) {
-  .primary-offer {
-    font-size: 30px;
-    height: 15vh;
+@media  screen and (min-height: 500px){
+   .primary-offer {
+      height: 30vh;
   }
-
 }
-

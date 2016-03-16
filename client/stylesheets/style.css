@@ -53,7 +53,7 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
 
 
 .carousel .item {
-    height: 45vh;
+    height: 46vh;
   }
 
 
@@ -62,9 +62,6 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
     padding-right: 0px;
     padding-left: 0px;
   }
-  /*.carousel .item {
-    height: 37vh;
-   }*/
 }
 
 @media screen and (min-width: 700px) and (max-width: 960px) {
@@ -75,14 +72,8 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
   }
 }
 
-@media  screen and (min-height: 650px) and (max-height: 900px){
+@media  screen and (min-height: 500px){
   .carousel .item {
-      height: 47vh;
-    }
-}
-
-@media  screen and (max-height: 500px){
-  .carousel .item {
-      height: 40vh;
+      height: 50vh;
     }
 }

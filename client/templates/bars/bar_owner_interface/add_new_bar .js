@@ -63,9 +63,9 @@ Template.addNewBar.events({
 
       if (result.barExists) {
         alert("This bar has already exists");
+      } else {
+        Router.go('barsList');        
       }
-
-      Router.go('barsList');
     });
   }
 });

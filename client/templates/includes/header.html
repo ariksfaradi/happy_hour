@@ -18,7 +18,7 @@
           <li class="active"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
   				{{#if isAdmin}}<li><a href="{{pathFor 'admin'}}"> Admin</a></li>{{/if}}
           <li><a href="{{pathFor 'discoverySettings'}}">Discovery Settings</a></li>
-  			   {{#if currentUser}}<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>{{/if}}	
+  			   {{#if isAdmin}}<li><a href="{{pathFor 'addNewBar'}}" >Adding New Bar</a></li>{{/if}}	
   			</ul>
 
         <ul class="nav navbar-nav navbar-right login">

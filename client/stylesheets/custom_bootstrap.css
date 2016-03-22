@@ -15,6 +15,9 @@
   padding-right: 200px; 
 }
 
+.form-horizontal .form-group {
+  margin: 0px;
+}
 @media  screen and (max-width: 700px) {
   .container {
     padding-right: 0px;

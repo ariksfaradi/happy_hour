@@ -1,11 +1,11 @@
 navigator.geolocation.getCurrentPosition(function(position) {
   if ("geolocation" in navigator)
   {
-    Logger.log("geolocation is avialiable");
+    console.log("geolocation is avialiable");
     Session.set('lat', position.coords.latitude);
     Session.set('lon', position.coords.longitude);  
   } else {
-    Logger.log("geolocation is not avialiable");
+    console.log("geolocation is not avialiable");
   }
       
 }); 

@@ -9,11 +9,10 @@ Meteor.publish("bars", function (coordinates, radius, hours) {
   upperBoundHour = convertToFloat(hours.upperBoundHour);
   console.log(lowerBoundHour , upperBoundHour);
   if (!coordinates.lon) {
-    Logger.log("server dosent get coordinates");
+    console.log("server dosent get coordinates");
     return;
   }
 
-  Logger.log("server get coordinates");
   // var start = moment(hours.lowerBoundHour).toDate();
   // console.log(start);
   if (!radius)

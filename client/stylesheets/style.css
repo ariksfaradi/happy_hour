@@ -26,19 +26,8 @@ a {
 }
 
 
-.container {
-  padding-left: 200px;
-  padding-right: 200px; 
-}
-
 .context {
   text-align: center;
-}
-
-.btn {
-  padding: 1px 3px;
-  line-height: 1.2;
-  border-radius: 18px;  
 }
 
 
@@ -51,29 +40,3 @@ a.share:hover, a.shre:visited a.like:hover, a.like:visited {
   background-color: green;
 }
 
-
-.carousel .item {
-    height: 46vh;
-  }
-
-
-@media  screen and (max-width: 700px) {
-  .container {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
-@media screen and (min-width: 700px) and (max-width: 960px) {
-  /*medium size*/
-  .container {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
-@media  screen and (min-height: 500px){
-  .carousel .item {
-      height: 50vh;
-    }
-}

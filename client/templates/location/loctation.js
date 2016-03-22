@@ -15,12 +15,12 @@ function location() {
 	navigator.geolocation.getCurrentPosition(function(position) {
 		if ("geolocation" in navigator)
 		{
-			Logger.log("geolocation is avialiable");
+			console.log("geolocation is avialiable");
 			Session.set('lon', position.coords.longitude);	
 			Session.set('lat', position.coords.latitude);
         	
 		} else {
-			Logger.log("geolocation is not avialiable");
+			console.log("geolocation is not avialiable");
 		}
         
     }, error);

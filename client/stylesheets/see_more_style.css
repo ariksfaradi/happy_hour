@@ -1,13 +1,24 @@
 .details {
   color: #000000;
+  padding-top: 10px;
+  padding-left: 15vh;
+  padding-right: 15vh;
 }
 
 .see_more_icon {
 	list-style: none;
-	background-size: 40px 40px;
+	/*background-size: 40px 50px;*/
+	background-size: 25px 25px;
 	background-repeat: no-repeat;
-	padding-bottom: 1px;
-	
+	background-position: left;
+	font-size: 25px;
+}
+
+@media  screen and (max-width: 700px) {
+	.details {
+		padding-left: 5vh;
+		padding-right: 5vh;
+	}
 }
 
 .see_more_icon[data-type="vegan-friendly-icon"] {

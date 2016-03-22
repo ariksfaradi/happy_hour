@@ -85,7 +85,7 @@ Template.barItem.helpers({
     var start = hourRepresentation(this.startHappyHour);
     var end = hourRepresentation(this.endHappyHour);
 
-    return "happy hour time: " + start + " - " + end;
+    return start + " - " + end;
   }
 
 });
